@@ -10,7 +10,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxNumAtFirstPosition() {
 		FindMax test = new FindMax();
-		Integer maxNum = test.findMaxInt(10, 5, 3);
+		Integer maxNum = test.maximum(10, 5, 3);
 		Integer expec = 10;
 		assertEquals(expec, maxNum);
 			
@@ -19,7 +19,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxNumAtSecondPosition() {
 		FindMax test = new FindMax();
-		Integer maxNum = test.findMaxInt(6, 12, 3);
+		Integer maxNum = test.maximum(6, 12, 3);
 		Integer expec = 12;
 		assertEquals(expec, maxNum);
 			
@@ -28,7 +28,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxNumAtThridPosition() {
 		FindMax test = new FindMax();
-		Integer maxNum = test.findMaxInt(6, 12, 23);
+		Integer maxNum = test.maximum(6, 12, 23);
 		Integer expec = 23;
 		assertEquals(expec, maxNum);
 			
@@ -37,7 +37,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxStringAtFirstPosition() {
 		FindMax test = new FindMax();
-		String maxString = test.findMaxString("Peach","Banana","Apple" );
+		String maxString = test.maximum("Peach","Banana","Apple" );
 		String expec = "Peach";
 		assertEquals(expec, maxString);
 			
@@ -46,7 +46,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxStringAtSecondPosition() {
 		FindMax test = new FindMax();
-		String maxString = test.findMaxString("Banana","Peach","Apple" );
+		String maxString = test.maximum("Banana","Peach","Apple" );
 		String expec = "Peach";
 		assertEquals(expec, maxString);
 			
@@ -55,14 +55,14 @@ class FindMaxTest {
 	@Test
 	void giveMaxStringAtThirdPosition() {
 		FindMax test = new FindMax();
-		String maxString = test.findMaxString("Banana","Apple","Peach" );
+		String maxString = test.maximum("Banana","Apple","Peach" );
 		String expec = "Peach";
 		assertEquals(expec, maxString);
 	}
 	@Test
 	void giveMaxFloatAtFirstPosition() {
 		FindMax test = new FindMax();
-		Float maxNum = test.findMaxFloat(10.0f, 5.2f, 3.1f);
+		Float maxNum = test.maximum(10.0f, 5.2f, 3.1f);
 		Float expec = 10.0f;
 		assertEquals(expec, maxNum);
 			
@@ -71,7 +71,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxFloatAtSecondPosition() {
 		FindMax test = new FindMax();
-		Float maxNum = test.findMaxFloat(6.4f, 12.7f, 3.0f);
+		Float maxNum = test.maximum(6.4f, 12.7f, 3.0f);
 		Float expec = 12.7f;
 		assertEquals(expec, maxNum);
 			
@@ -80,7 +80,7 @@ class FindMaxTest {
 	@Test
 	void giveMaxFloatAtThridPosition() {
 		FindMax test = new FindMax();
-		Float maxNum = test.findMaxFloat(6f, 12.1f, 23.9f);
+		Float maxNum = test.maximum(6f, 12.1f, 23.9f);
 		Float expec = 23.9f;
 		assertEquals(expec, maxNum);
 			
