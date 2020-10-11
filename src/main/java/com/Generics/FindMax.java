@@ -1,38 +1,31 @@
 package com.Generics;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FindMax<T extends Comparable<T>> {
-	T a,  b,  c;
+	public T[] arguments;
 	/**
 	 * Constructor
 	 * @param a
 	 * @param b
 	 * @param c
 	 */
-	public FindMax(T a, T b, T c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
+	public FindMax(T ...arguments) {
+		this.arguments = arguments;
 	}
 	/**
 	 * Generic class UC3
 	 * @return
 	 */
 	public T maximum() {
-		return maximum(a, b, c);
+		T maximum = maximum(arguments);
+		return maximum;
 	}
 
 
-	public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
-		T max = a;                   // assume a is initially the largest
-
-		if (b.compareTo(max) > 0)
-			max = b;                // b is the largest so far
-
-		if (c.compareTo(max) > 0)
-			max = c;                // c is the largest
-
-		return max;                // returns the largest object
+	public static <E extends Comparable<E>> E maximum(E ...varibles) {
+		Arrays.sort(varibles);
+		return varibles[varibles.length - 1];                
 	}                               
 }
