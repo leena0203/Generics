@@ -34,4 +34,31 @@ class FindMaxTest {
 			
 	}
 
+	@Test
+	void giveMaxFloatAtFirstPosition() {
+		FindMax test = new FindMax();
+		Float maxNum = test.findMaxFloat(10.0f, 5.2f, 3.1f);
+		Float expec = 10.0f;
+		assertEquals(expec, maxNum);
+			
+	}
+	
+	@Test
+	void giveMaxFloatAtSecondPosition() {
+		FindMax test = new FindMax();
+		Float maxNum = test.findMaxFloat(6.4f, 12.7f, 3.0f);
+		Float expec = 12.7f;
+		assertEquals(expec, maxNum);
+			
+	}
+	
+	@Test
+	void giveMaxFloatAtThridPosition() {
+		FindMax test = new FindMax();
+		Float maxNum = test.findMaxFloat(6f, 12.1f, 23.9f);
+		Float expec = 23.9f;
+		assertEquals(expec, maxNum);
+			
+	}
+
 }
