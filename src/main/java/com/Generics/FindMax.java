@@ -2,69 +2,37 @@ package com.Generics;
 
 import java.util.Scanner;
 
-public class FindMax {
-//	/**
-//	 * UC1
-//	 * 
-//	 * @param a
-//	 * @param b
-//	 * @param c
-//	 * @return
-//	 */
-//	public static Integer findMaxInt(Integer a, Integer b, Integer c) {
-//		if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-//			return a;
-//		else if (b.compareTo(a) > 0 && b.compareTo(c) > 0)
-//			return b;
-//		else
-//			return c;
-//	}
-//
-//	/**
-//	 * UC2
-//	 * 
-//	 * @param a
-//	 * @param b
-//	 * @param c
-//	 * @return
-//	 */
-//	public static Float findMaxFloat(Float a, Float b, Float c) {
-//		if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-//			return a;
-//		else if (b.compareTo(a) > 0 && b.compareTo(c) > 0)
-//			return b;
-//		else
-//			return c;
-//	}
-//
-//	/**
-//	 * UC3
-//	 * 
-//	 * @param a
-//	 * @param b
-//	 * @param c
-//	 * @return
-//	 */
-//	public static String findMaxString(String a, String b, String c) {
-//		if (a.compareTo(b) > 0 && a.compareTo(c) > 0)
-//			return a;
-//		else if (b.compareTo(a) > 0 && b.compareTo(c) > 0)
-//			return b;
-//		else
-//			return c;
-//
-//	}
-//
-//	
+public class FindMax<T extends Comparable<T>> {
+	T a,  b,  c;
+	/**
+	 * Constructor
+	 * @param a
+	 * @param b
+	 * @param c
+	 */
+	public FindMax(T a, T b, T c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
+	/**
+	 * Generic class UC3
+	 * @return
+	 */
+	public T maximum() {
+		return maximum(a, b, c);
+	}
+
+
 	public static <T extends Comparable<T>> T maximum(T a, T b, T c) {
-	    T max = a; // assume x is initially the largest
+		T max = a;                   // assume a is initially the largest
 
-	    if (b.compareTo(max) > 0)
-	      max = b; // y is the largest so far
+		if (b.compareTo(max) > 0)
+			max = b;                // b is the largest so far
 
-	    if (c.compareTo(max) > 0)
-	      max = c; // z is the largest
+		if (c.compareTo(max) > 0)
+			max = c;                // c is the largest
 
-	    return max; // returns the largest object
-	  } // end method maximum
+		return max;                // returns the largest object
+	}                               
 }
