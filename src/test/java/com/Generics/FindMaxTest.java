@@ -35,6 +35,31 @@ class FindMaxTest {
 	}
 
 	@Test
+	void giveMaxStringAtFirstPosition() {
+		FindMax test = new FindMax();
+		String maxString = test.findMaxString("Peach","Banana","Apple" );
+		String expec = "Peach";
+		assertEquals(expec, maxString);
+			
+	}
+	
+	@Test
+	void giveMaxStringAtSecondPosition() {
+		FindMax test = new FindMax();
+		String maxString = test.findMaxString("Banana","Peach","Apple" );
+		String expec = "Peach";
+		assertEquals(expec, maxString);
+			
+	}
+	
+	@Test
+	void giveMaxStringAtThirdPosition() {
+		FindMax test = new FindMax();
+		String maxString = test.findMaxString("Banana","Apple","Peach" );
+		String expec = "Peach";
+		assertEquals(expec, maxString);
+	}
+	@Test
 	void giveMaxFloatAtFirstPosition() {
 		FindMax test = new FindMax();
 		Float maxNum = test.findMaxFloat(10.0f, 5.2f, 3.1f);
